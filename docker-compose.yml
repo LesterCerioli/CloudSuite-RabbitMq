@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   rabbitmq:
-    image: rabbitmq:3-management
+    image: cloudsolutionrepository001.azurecr.io/rabbitmq:1.0.1
     container_name: rabbitmq
     ports:
       - "5672:5672"   
@@ -12,8 +12,8 @@ services:
       - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf  # Opcional: Arquivo de configuração personalizado
       # - ./enabled_plugins:/etc/rabbitmq/enabled_plugins  # Opcional: Arquivo de plugins personalizados
     environment:
-      - RABBITMQ_DEFAULT_USER=dxt743994  
-      - RABBITMQ_DEFAULT_PASS=Hts74398#@%  
+      - RABBITMQ_DEFAULT_USER=guest  
+      - RABBITMQ_DEFAULT_PASS=guest 
 
 volumes:
   rabbitmq_data:
